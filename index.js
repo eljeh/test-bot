@@ -1,4 +1,5 @@
 // Import necessary modules and libraries
+import 'dotenv/config';
 import { Partials, Client, GatewayIntentBits, Events } from 'discord.js';
 
 // Create a new Discord client instance
@@ -18,7 +19,7 @@ const client = new Client({
 });
 
 // Log in to Discord using the provided BOT_TOKEN
-client.login('MTE4NDQzNjA4MzY3MzU0NjgwNA.Gl9uTj.9n74Z49WvL7A8ZzUXbYIapkp2SpVt5gou23pik');
+client.login(process.env.BOT_TOKEN);
 
 // Event handler for when the bot is ready
 client.on(Events.ClientReady, () => {
