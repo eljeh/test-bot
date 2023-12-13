@@ -25,3 +25,13 @@ client.login(process.env.BOT_TOKEN);
 client.on(Events.ClientReady, () => {
 	console.log(`${client.user.username} is online!`);
 });
+
+client.on(Events.MessageCreate, async (message) => {
+
+	// boop response
+	if (message.content.toLowerCase() === 'beep') {
+		// Reply with the initial message
+		message.reply('boop');
+	}
+
+});
